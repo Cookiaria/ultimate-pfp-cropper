@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ultaimate-pfp-cropper</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+
+    <div class="container-of-cropper">
+            <img id="cropperimage" src="/assets/pom.png">
+    </div>
+
+    <input type="file" id="inputImage" accept="image/*">
+    <button id="saveButton" style="display: none;">show off</button>
+
+    <div class="preview-container">
+        <div class="discord-preview">
+            <p>sidebar:</p>
+            <div class="cropperpreview discord-sidebar"></div>
+        </div>
+        <div class="discord-preview">
+            <p>chat:</p>
+            <div class="cropperpreview discord-small"></div>
+        </div>
+        <div class="discord-preview">
+            <p>profile:</p>
+            <div class="cropperpreview discord-large"></div>
+        </div>
+        <div class="discord-preview">
+            <p>bigger lol:</p>
+            <div class="cropperpreview general-preview"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.js"></script>
+    <script src="/assets/js/cropper.js.init.js"></script>
+</body>
+
+</html>
