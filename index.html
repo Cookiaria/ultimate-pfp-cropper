@@ -13,33 +13,37 @@
 <body>
 
     <div class="container-of-cropper">
-            <img id="cropperimage" src="/assets/main.png">
+        <img id="cropperimage" src="/assets/main.jpg">
     </div>
 
-    <input type="file" id="inputImage" accept="image/*">
-    <button id="saveButton" style="display: none;">show off</button>
+    <div class="input-container">
+        <input type="file" id="inputImage" accept="image/*">
+    </div>
 
     <div class="preview-container">
-        <div class="discord-preview">
-            <p>sidebar:</p>
-            <div class="cropperpreview discord-sidebar"></div>
+
+        <div id="brainrotSelector">
+            <label for="platform-select">choose the brainrot:</label>
+            <select id="platform-select">
+                <option value="general">general</option>
+                <option value="discord">discord</option>
+                <option value="twitter">twitter</option>
+                <option value="bsky">bluesky</option>
+                <option value="steam">steam</option>
+                <!-- add more stuff here -->
+            </select>
         </div>
-        <div class="discord-preview">
-            <p>chat:</p>
-            <div class="cropperpreview discord-small"></div>
-        </div>
-        <div class="discord-preview">
-            <p>profile:</p>
-            <div class="cropperpreview discord-large"></div>
-        </div>
-        <div class="discord-preview">
-            <p>bigger lol:</p>
-            <div class="cropperpreview general-preview"></div>
-        </div>
+
+        <div class="cropper-previewers">
+            <p id="platformName"></p>
+            <div id="previews"></div>
+          </div>
+
     </div>
+    <button id="saveButton" style="display: none;">save n' show off</button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.js"></script>
-    <script src="/assets/js/cropper.js.init.js"></script>
+    <script src="/assets/js/cropper-init.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,4 @@
-
-
-body {  
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
@@ -9,69 +7,76 @@ body {
     height: 100%
 }
 
-.btn {
-    width: 40px;
-    height: 40px;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-}
-
-p {
-    margin: none;
-}
-
-.cropper-modal {
-    background-color: inherit !important;
-}
+/*
+div {
+    border: 1px solid gold
+} */
 
 .container-of-cropper {
     height: 50vh;
     display: flex;
     max-width: fit-content;
     margin: 0 auto;
-}   
+    justify-content: center;
+    align-items: center;
+}
 
-.preview-container {
+.preview-container > [class*="previews-"] {
     display: flex;
     gap: 64px;
-    max-width: fit-content;
+    width: fit-content;
     margin: 0 auto;
 }
 
-.discord-small {
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    overflow: hidden;
+.general-preview-cont {
+    position: fixed;
+    padding: 8px;
+    top: 0;
+    right: 0;
 }
 
-.discord-sidebar {
-    width: 32px;
+#saveButton {
+    max-width: fit-content;
+    margin: 12px auto;
     height: 32px;
+}
+
+.input-container {
+    max-width: fit-content;
+    margin: 8px auto;
+}
+
+.general-preview {
+    width: 192px;
+    height: 192px;
     border-radius: 16px;
     overflow: hidden;
 }
 
-.general-preview {
-    width: 128px;
-    height: 128px;
-    border-radius: 64px;
-    overflow: hidden;
+#brainrotSelector {
+    max-width: fit-content;
+    margin: 0 auto;
 }
 
-.discord-large {
-    width: 80px;
-    height: 80px;
-    border-radius: 40px;
-    overflow: hidden;
+#platformName {
+    display: none;
 }
 
-.discord-preview {
+.ultimate-previewer {
     display: flex;
+    gap: 8px;
     flex-direction: column;
     align-items: center;
+}
+
+#previews{
+    display: flex;
+    gap: 32px;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+#cropperimage {
+    display: none; 
 }
 
