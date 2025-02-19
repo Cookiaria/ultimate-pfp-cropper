@@ -3,13 +3,13 @@ const platformDimensions = {
     '': { width: 256, height: 256, borderRadius: 128 }
   },
   discord: {
-    'profile': { width: 128, height: 128, borderRadius: 64 },
+    'profile': { width: 80, height: 80, borderRadius: 40 },
     'message': { width: 48, height: 48, borderRadius: 24 },
-    'direct message': { width: 32, height: 32, borderRadius: 16 },
+    'dm': { width: 32, height: 32, borderRadius: 16 },
   },
   twitter: {
     'profile': { width: 133.5, height: 133.5, borderRadius: 66.75 },
-    'profile preview': { width: 64, height: 64, borderRadius: 32 },
+    'preview': { width: 64, height: 64, borderRadius: 32 },
     'post': { width: 40, height: 40, borderRadius: 20 },
   },
   bsky: {
@@ -17,12 +17,47 @@ const platformDimensions = {
     post: { width: 42, height: 42, borderRadius: 21 },
   },
   steam: {
-    profile: { width: 184, height: 184, borderRadius: 0 },
+    'profile page': { width: 184, height: 184, borderRadius: 0 },
     '64x64': { width: 64, height: 64, borderRadius: 0 },
     'friend list': { width: 30, height: 30, borderRadius: 0 },
     'topright': { width: 22, height: 22, borderRadius: 0 },
+  },
+  artfight: {
+    thumbnail: { width: 200, height: 200, borderRadius: 5 },
+    profile: { width: 100, height: 100, borderRadius: 5 },
+    featured: { width: 70, height: 70, borderRadius: 5 },
+    'navvar icon': { width: 51, height: 51, borderRadius: 0 },
+  },
+  youtube: {
+    channel: { width: 160, height: 160, borderRadius: 80 },
+    'top right': { width: 32, height: 32, borderRadius: 16 },
+  },
+  spotify: {
+    'playlist thumbnail': { width: 232, height: 232, borderRadius: 4 },
+    profile: { width: 32.28, height: 32.28, borderRadius: 16.14 }
   }
 };
+
+// Function to generate the options dynamically
+function generatePlatformOptions() {
+  const platformSelect = document.getElementById('platform-select');
+
+  // Loop through each platform in the platformDimensions object
+  for (const platform in platformDimensions) {
+    if (platformDimensions.hasOwnProperty(platform)) {
+      // Create a new option element
+      const option = document.createElement('option');
+      option.value = platform;
+      option.textContent = platform;
+
+      // Append the option to the select element
+      platformSelect.appendChild(option);
+    }
+  }
+}
+
+// Call the function to generate the options when the page loads
+generatePlatformOptions();
 
 document.addEventListener('DOMContentLoaded', function () {
   const inputImage = document.getElementById('inputImage');
@@ -49,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
       preview: '.cropperpreview',
       background: false,
       zoomOnWheel: false,
+      rotatable: true,
     });
 
     // Show the image after Cropper is initialized
